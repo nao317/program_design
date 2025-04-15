@@ -1,0 +1,10 @@
+iarray[0]: 1
+iarray[1]: 2
+iarray[2]: 3
+iarray[3]: 4
+iarray[4]: 5
+iarray[5]: 6
+iarray[6]: 7
+iarray[7]: 8
+iarray[8]: 9
+iarray[9]: 10
