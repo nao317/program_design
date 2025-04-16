@@ -1,6 +1,24 @@
 #include <stdio.h>
 #define ARRAYSIZE 24
 
+double kion_max(double kion[], int n) {
+    double maxtemp = kion[0];
+    for (int i = 1; i < n; i++) {
+        if (maxtemp < kion[i]) {
+            maxtemp = kion[i];
+        }
+    }
+    return maxtemp;
+}
+double kion_min(double kion[], int n) {
+    double mintemp = kion[0];
+    for (int i = 1; i < n; i++) {
+        if (mintemp > kion[i]) {
+            mintemp = kion[i];
+        }
+    }
+    return mintemp;
+}
 void kion_print(double kion[], int n) {
     for (int i = 0; i < n; i++) {
         printf("%d時: %.1f\n", i, kion[i]);
@@ -20,5 +38,7 @@ int main(void) {
     int i;
     kion_print(kion, ARRAYSIZE);
     printf("平均気温: %.1f\n", kion_heikin(kion, ARRAYSIZE));
+    printf("最高値: %.1f\n", kion_max(kion, ARRAYSIZE));
+    printf("最低値: %.1f\n", kion_min(kion, ARRAYSIZE));
     return 0;
 }
