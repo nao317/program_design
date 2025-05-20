@@ -1,0 +1,49 @@
+（1）kion-stat-main0.c, kion-stat-heikin0.c のコンパイル結果(コンパイルのコマンドと出力メッセージ)
+
+user@buridaikon:~/classes/program_design/program_design/source$ gcc -o test kion-stat-main0.c kion-stat-heikin0.c
+kion-stat-main0.c: In function ‘main’:
+kion-stat-main0.c:13:5: warning: implicit declaration of function ‘kion_print’ [-Wimplicit-function-declaration]
+   13 |     kion_print(kion, ARRAYSIZE) ;
+      |     ^~~~~~~~~~
+kion-stat-main0.c:17:32: warning: implicit declaration of function ‘kion_heikin’ [-Wimplicit-function-declaration]
+   17 |     printf("平均気温: %.1f\n", kion_heikin(kion, ARRAYSIZE)) ;
+      |                                ^~~~~~~~~~~
+kion-stat-main0.c:17:26: warning: format ‘%f’ expects argument of type ‘double’, but argument 2 has type ‘int’ [-Wformat=]
+   17 |     printf("平均気温: %.1f\n", kion_heikin(kion, ARRAYSIZE)) ;
+      |                       ~~~^     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                          |     |
+      |                          |     int
+      |                          double
+      |                       %.1d
+user@buridaikon:~/classes/program_design/program_design/source$ 
+
+（2）kion-stat-heikin.h, kion-stat-main.c, kion-stat-heikin.cのコンパイル結果(コンパイルのコマンドと出力メッセージ)
+
+user@buridaikon:~/classes/program_design/program_design/source$ ./test
+0時: 12.8
+1時: 12.0
+2時: 11.4
+3時: 11.2
+4時: 10.6
+5時: 10.6
+6時: 10.3
+7時: 10.6
+8時: 13.1
+9時: 16.9
+10時: 20.1
+11時: 22.2
+12時: 21.9
+13時: 22.5
+14時: 23.9
+15時: 24.1
+16時: 22.9
+17時: 21.9
+18時: 20.1
+19時: 18.9
+20時: 17.6
+21時: 17.0
+22時: 16.4
+23時: 15.7
+-----
+平均気温: 16.9
+user@buridaikon:~/classes/program_design/program_design/source$ 
