@@ -1,0 +1,10 @@
+<html>
+<head>
+<title>気温データ</title>
+</head>
+<body>
+<h1>日別気温統計データ</h1><table border=1>
+<tr><th>月日</th><th>平均</th><th>最高</th><th>最低</th><tr>
+</table>
+</body>
+</html>
