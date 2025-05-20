@@ -79,7 +79,7 @@ void kion_html(struct kisyou kisyoudata[], int size) {
         double mintemp = kion_min(kion, DAYARRAY);
         int month = kisyoudata[i].month;
         int day = kisyoudata[i].day;
-        printf("<tr>\n");
+        printf("<tr>");
         printf("<td>%d月%d日</td>", month, day);
         printf("<td>%.1f</td>", average);
         printf("<td>%.1f</td>", maxtemp);
