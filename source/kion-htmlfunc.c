@@ -1,4 +1,4 @@
-/* kion-html.c */
+/* kion-htmlfunc.c */
 
 #include <stdio.h>
 #include <stdlib.h>
