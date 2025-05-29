@@ -1,0 +1,23 @@
+（1）学生番号と氏名
+
+学生番号：242C2016
+氏名：奥村　直
+
+（2）課題の概要
+
+fgets関数やfprintf関数を使って、ファイルのデータを読み込み、それをHTMLファイルとして
+出力したものを実行時に作成した。
+
+（3）実行結果
+
+user@buridaikon:~/classes/program_design/program_design/source$ gcc -o test kion-htmlreportcmd2.c html-report4.c readfile.c kionstat.c
+user@buridaikon:~/classes/program_design/program_design/source$ ./test kion-2018.csv report.html
+
+上記の実行結果とともに同じ階層にhtmlファイルが生成された
+
+（4）感想
+
+今回も似たようなファイル名、プロトタイプ宣言が引き起こすエラーや引数指定時のミスに苦しめられた
+main関数に引数を指定しておくことで実行したときのコマンドラインが整然とされて見やすいことを知った
+また、今回生成したhtmlファイルのようにファイルを操作する関数をうまく使うことで、簡単に新しいファイルとして
+生成できることを知った。今回、大幅に提出が遅れてしまったことについて反省している。
