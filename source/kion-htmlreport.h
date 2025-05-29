@@ -7,4 +7,4 @@ struct kisyou {
 
 /* 関数プロトタイプ */
 int readfile(char filename[], struct kisyou array[], int amax);
-void html_report(struct kisyou array[], int size);
+void html_report(struct kisyou array[], int size, char htmlfilename[]);
