@@ -1,0 +1,15 @@
+(1)コンパイル手順
+user@buridaikon:~/classes/program_design/program_design/source$ gcc -o test line_scanf.c
+user@buridaikon:~/classes/program_design/program_design/source$ gcc -o test line_sscanf.c
+(2)実行手順と実行結果user@buridaikon:~/classes/program_design/program_design/source$ ./test < point.dat
+x = 4416, y = 0
+x = 100, y = 200
+x = 200, y = 300
+x = 80, y = 50
+x = 70, y = 40
+ser@buridaikon:~/classes/program_design/program_design/source$ ./test < point2.dat
+x = 100, y = 200
+x = 200, y = 300
+x = 80, y = 50
+x = 70, y = 40
+user@buridaikon:~/cl
