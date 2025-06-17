@@ -1,0 +1,5 @@
+(2),(3)
+user@buridaikon:~/classes/program_design/program_design/source$ gcc -o test simplestack.c kaibun.c
+user@buridaikon:~/classes/program_design/program_design/source$ ./test
+shinbunshi
+回文ではありません
