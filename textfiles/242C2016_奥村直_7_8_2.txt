@@ -1,0 +1,10 @@
+実行手順と実行結果
+
+user@buridaikon:~/classes/program_design/program_design/source$ gcc -o test arraystack.c kaibun3.c
+user@buridaikon:~/classes/program_design/program_design/source$ ./test
+level
+回文です
+No lemon, No melon
+回文です
+^C
+user@buridaikon:~/classes/program_design/program_design/source$
