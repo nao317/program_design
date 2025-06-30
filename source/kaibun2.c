@@ -1,47 +1,51 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "simplestack.h"
+#include "arraystack.h"
 
 #define MAXLINE 200
 
 int main(void) {
     char buff[MAXLINE];
     int i, size;
-    int isPalindrome;
+    int flag;
 
-    while (fgets(buff, MAXLINE, stdin) != NULL) {
+    while(fgets(buff, MAXLINE, stdin) != NULL) {
         size = strlen(buff);
-
         if (buff[size - 1] == '\n') {
             buff[size - 1] = '\0';
             size--;
         }
+        STACK *sp = newStack();
+        if(sp == NULL) {
+            fprintf(stderr, "error\n");
+            exit(1);
+        }
 
-        stackInit();
-        isPalindrome = TRUE;
+        flag = TRUE;
 
         for (i = 0; i < size / 2; i++) {
-            stackPush((int)buff[i]);
+            stackPush(sp, (int)buff[i]);
         }
 
         if (size % 2 == 1) {
-            i++;  // skip center char
+            i++;
         }
 
         for (; i < size; i++) {
-            if (stackPop() != (int)buff[i]) {
-                isPalindrome = FALSE;
+            if (stackPop(sp) != (int)buff[i]) {
+                flag = FALSE;
                 break;
             }
         }
 
-        if (isPalindrome) {
+        if (flag) {
             printf("回文です\n");
         } else {
             printf("回文ではありません\n");
         }
+        
+        free(sp);
     }
-
     return 0;
 }
