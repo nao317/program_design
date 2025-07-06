@@ -1,0 +1,14 @@
+(2、3)コンパイル手順、実行手順と実行結果
+user@buridaikon:~/classes/program_design/program_design/source$ gcc -o test rational0.c adt_rational0.c
+user@buridaikon:~/classes/program_design/program_design/source$ ./test
+a = 2/3
+b = -3/5
+c = 2/3
+d = 1/1
+a + b = 1/15
+a - b = 19/15
+a * b = -2/5
+a / b = -10/9
+a と b は異なる。
+a が b より大きい。
+a と c は等しい。
